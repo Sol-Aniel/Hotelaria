@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Hotelaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Encantado</h1>
+        <nav>
+            <ul>
+                <li><a href="#cadastro-hospedes">Cadastro de Hóspedes</a></li>
+                <li><a href="#gerenciamento-quartos">Gerenciamento de Quartos</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#lista-hospedes">Lista de Hóspedes</a></li>
+                <li><a href="#lista-quartos">Lista de Quartos</a></li>
+                <li><a href="#lista-reservas">Lista de Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+      
+        <section id="cadastro-hospedes">
+            <h2>Cadastro de Hóspedes</h2>
+            <form id="form-hospedes">
+                <label for="nomeHospede">Nome Completo:</label>
+                <input type="text" id="nomeHospede" required>
+
+
+                <label for="documentoHospede">Documento de Identidade:</label>
+                <input type="text" id="documentoHospede" required>
+
+
+                <label for="enderecoHospede">Endereço:</label>
+                <input type="text" id="enderecoHospede" required>
+
+
+                <label for="contatoHospede">Contato (Telefone/E-mail):</label>
+                <input type="text" id="contatoHospede" required>
+
+
+                <button type="submit">Cadastrar Hóspede</button>
+            </form>
+        </section>
+
+
+               <section id="gerenciamento-quartos">
+            <h2>Gerenciamento de Quartos</h2>
+            <form id="form-quartos">
+                <label for="numeroQuarto">Número do Quarto:</label>
+                <input type="number" id="numeroQuarto" required>
+
+
+                <label for="tipoQuarto">Tipo do Quarto:</label>
+                <select id="tipoQuarto" required>
+                    <option value="">Selecione</option>
+                    <option value="Simples">Simples</option>
+                    <option value="Duplo">Duplo</option>
+                    <option value="Suíte">Suíte</option>
+                </select>
+
+
+                <label for="precoQuarto">Preço por Noite (R$):</label>
+                <input type="number" id="precoQuarto" step="0.01" required>
+
+
+                <button type="submit">Adicionar Quarto</button>
+            </form>
+        </section>
+
+
+
+
+        <section id="reservas">
+            <h2>Reservas</h2>
+            <form id="form-reservas">
+                <label for="hospedeReserva">Hóspede:</label>
+                <select id="hospedeReserva" required>
+                    <option value="">Selecione</option>
+                </select>
+
+
+                <label for="quartoReserva">Quarto:</label>
+                <select id="quartoReserva" required>
+                    <option value="">Selecione</option>
+                </select>
+
+
+                <label for="checkinReserva">Data de Check-In:</label>
+                <input type="date" id="checkinReserva" required>
+
+
+                <label for="checkoutReserva">Data de Check-Out:</label>
+                <input type="date" id="checkoutReserva" required>
+
+
+                <button type="submit">Fazer Reserva</button>
+            </form>
+        </section>
+
+
+                <section id="lista-hospedes">
+            <h2>Lista de Hóspedes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Documento</th>
+                        <th>Endereço</th>
+                        <th>Contato</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-hospedes">
+                                   </tbody>
+            </table>
+        </section>
+
+
+  
+        <section id="lista-quartos">
+            <h2>Lista de Quartos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Tipo</th>
+                        <th>Preço por Noite (R$)</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-quartos">
+                                   </tbody>
+            </table>
+        </section>
+
+
+               <section id="lista-reservas">
+            <h2>Lista de Reservas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hóspede</th>
+                        <th>Quarto</th>
+                        <th>Check-In</th>
+                        <th>Check-Out</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-reservas">
+                                  </tbody>
+            </table>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 Hotel Encantado. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
